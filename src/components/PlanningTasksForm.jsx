@@ -34,6 +34,9 @@ function PlanningTasksForm({ programmers }) {
     alert("Task can be done");
   }
 
+  const isValidInput = codeLines > 0 && limitDays > 0;
+  const isTaskPossible = isValidInput && canDo;
+
   return (
     <div className="page-container">
       <h3>Your Task</h3>
@@ -44,6 +47,7 @@ function PlanningTasksForm({ programmers }) {
           id="code-lines"
           value={codeLines}
           onChange={handleChangeLines}
+          min="1"
         />
         time limit [days]
         <input
@@ -51,12 +55,15 @@ function PlanningTasksForm({ programmers }) {
           id="limit-days"
           value={limitDays}
           onChange={handleChangeDays}
+          min="1"
         />
         <button
           className="btn-add"
-          disabled={!canDo}
+          disabled={!isTaskPossible}
           onClick={handleClick}
-          style={{ backgroundColor: canDo ? "green" : "red" }}
+          style={{
+            backgroundColor: isTaskPossible ? "green" : "red",
+          }}
         >
           Do it
         </button>

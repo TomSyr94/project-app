@@ -1,0 +1,29 @@
+{
+  "programmers": [
+    {
+      "id": 1,
+      "name": "John Smith",
+      "position": "senior"
+    },
+    {
+      "id": 2,
+      "name": "Alice Johnson",
+      "position": "senior"
+    },
+    {
+      "id": 3,
+      "name": "Bob Anderson",
+      "position": "junior"
+    },
+    {
+      "id": 4,
+      "name": "Eva Martinez",
+      "position": "junior"
+    },
+    {
+      "id": 5,
+      "name": "Chris Davis",
+      "position": "junior"
+    }
+  ]
+}
